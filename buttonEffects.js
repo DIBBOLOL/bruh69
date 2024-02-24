@@ -1,5 +1,7 @@
 // Get the login button
 var loginButton = document.getElementById('loginButton');
+loginButton.disabled = true;
+
 var loginForm = document.getElementById('loginForm');
 
 // Set the initial position of the button
