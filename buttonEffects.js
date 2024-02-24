@@ -51,8 +51,14 @@ document.addEventListener('touchmove', function(event) {
 });
 
 // Add event listener to handle click event for document
-document.addEventListener('click', function(event) {
-    handleMove(event, loginButton);
+// Add event listener for button click
+loginButton.addEventListener('click', function(event) {
+    // Update the position of the button when clicked
+    var newX = Math.random() * (window.innerWidth - loginButton.offsetWidth);
+    var newY = Math.random() * (window.innerHeight - loginButton.offsetHeight);
+    
+    loginButton.style.left = newX + 'px';
+    loginButton.style.top = newY + 'px';
 });
 
 // Add event listener to handle touchstart event for login button
