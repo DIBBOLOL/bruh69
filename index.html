@@ -79,6 +79,23 @@
         handleMousemove(event, loginButton);
     });
 
+    // Add event listener to handle click event for document
+    document.addEventListener('click', function(event) {
+        addImage(event.clientX, event.clientY);
+    });
+
+    // // Function to add image at the specified coordinates
+    // function addImage(x, y) {
+    //     var image = document.createElement('img');
+    //     image.src = 'istockphoto-482338435-170667a-removebg-preview.png';
+    //     image.style.position = 'absolute';
+    //     image.style.left = x -48 + 'px';
+    //     image.style.top = y -40 + 'px';
+    //     image.style.width = '100px'; // Set the width
+    //     image.style.height = 'auto'; // Maintain aspect ratio
+    //     document.body.appendChild(image);
+    // }
+
     // Login function
     function login() {
         var username = document.getElementById('username').value;
