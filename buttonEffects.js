@@ -1,9 +1,10 @@
 // Get the login button
 var loginButton = document.getElementById('loginButton');
+var loginForm = document.getElementById('loginForm');
 
 // Set the initial position of the button
 var initialLeft = (window.innerWidth - loginButton.offsetWidth) / 2; // Centered horizontally
-var initialTop = document.getElementById('loginForm').getBoundingClientRect().bottom + 20; // 20px below the form
+var initialTop = loginForm.getBoundingClientRect().bottom + 20; // 20px below the form
 loginButton.style.left = initialLeft + 'px';
 loginButton.style.top = initialTop + 'px';
 
