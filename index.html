@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Button Flees</title>
+<style>
+    /* Styling for the login form */
+    #loginForm {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-collapse: collapse;
+    }
+
+    #loginForm td, #loginForm th {
+        padding: 8px;
+        border-bottom: 1px solid #ddd;
+        text-align: left;
+    }
+
+    #loginForm th {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+    #loginForm tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    /* Styling for the login button */
+    #loginButton {
+        position: absolute;
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+</style>
+</head>
+<body>
+
+<!-- Login form -->
+<form id="loginForm">
+    <table>
+        <tr>
+            <th colspan="2">Login</th>
+        </tr>
+        <tr>
+            <td>Username:</td>
+            <td><input type="text" id="username"></td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td><input type="password" id="password"></td>
+        </tr>
+    </table>
+</form>
+
+<!-- Login button -->
+<button id="loginButton">Login</button>
+
+<script src="buttonEffects.js"></script>
+<script>
+    // Get the login button
+    var loginButton = document.getElementById('loginButton');
+
+    // Default position of the login button
+    var defaultPosition = {
+        x: loginButton.getBoundingClientRect().left,
+        y: loginButton.getBoundingClientRect().top
+    };
+
+    // Add event listener to handle mousemove event for login button
+    document.addEventListener('mousemove', function(event) {
+        handleMousemove(event, loginButton);
+    });
+
+    // Login function
+    function login() {
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+
+        // For demonstration purposes, just log the values to the console
+        console.log("Username: " + username);
+        console.log("Password: " + password);
+
+        // You can add your authentication logic here
+    }
+</script>
+
+</body>
+</html>
